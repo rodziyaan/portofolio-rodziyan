@@ -1,0 +1,77 @@
+@import url("https://font.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    height: 13vh;
+    margin: 0;
+}
+
+nav {
+    width: 80%; /* Atur lebar navbar sesuai kebutuhan */
+    max-width: 450px;
+    background-color: #000000; /* Warna latar belakang navbar */
+    border-radius: 50px; /* Membuat bentuk capsul */
+    overflow: hidden; /* Mengatasi overflow konten */
+}
+
+ul {
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+li {
+    text-align: center;
+    transition: background-color 0.2s;
+}
+li::hover {
+    background-color: #000000;
+}
+
+a {
+    display: block;
+    padding: 20px;
+    line-height: center; /* Sesuaikan dengan tinggi navbar */
+    text-decoration: none;
+    color: white;
+}
+
+.bars_btn {
+    color: #ffffff;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 992px) {
+    nav {
+        width: 100%; /* Atur lebar navbar menjadi 100% untuk perangkat seluler */
+        border-radius: 0; /* Hilangkan border-radius untuk tampilan seluler */
+    }
+}
+
+.menu-icon {
+    display: none; /* Sembunyikan icon hamburger secara default */
+}
+
+/* Tampilkan icon hamburger saat tampilan responsif */
+@media only screen and (max-width: 600px) {
+    .menu-icon {
+        display: block; /* Tampilkan icon hamburger */
+        cursor: pointer; /* Ubah kursor menjadi tanda panah */
+    }
+
+    .menu {
+        display: none; /* Sembunyikan menu secara default pada tampilan responsif */
+    }
+}
